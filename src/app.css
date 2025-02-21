@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: "SF Pro Display Reg";
+  src: url("/src/fonts/sf-pro-display/sf-pro-display-regular.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "SF Pro Display Medium";
+  src: url("/src/fonts/sf-pro-display/sf-pro-display-medium.woff")
+    format("woff");
+}
+.font-sfpro-reg {
+  font-family: "SF Pro Display Reg";
+}
+.font-sfpro-medium {
+  font-family: "SF Pro Display Medium";
+}
+
+:root {
+  --color-general: #15171b;
+  --color-general-black: #0b0b0f;
+  --color-dark-gray: #1b1e22;
+  --color-primary: #24ffbc;
+  --color-gray: #83838d;
+  --color-light-gray: #f5f5f5;
+  --color-white: #ffffff;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: var(--color-dark-gray);
+  border-radius: 9999px;
+}
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-slide {
+  animation: fade-slide 0.3s ease-out forwards;
+}
